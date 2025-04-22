@@ -7,10 +7,15 @@ function getHtmlFiles() {
   return glob.sync('*.html', { ignore: ['dist/**', 'node_modules/**'] });
 }
 
+// Determine proper base path
+const isGitHubPages = process.env.GITHUB_ACTIONS === 'true';
+const base = isGitHubPages ? '/HTML_Conquerblocks/' : './';
+
 export default defineConfig({
-  base: './',
+  base: base,
   build: {
     outDir: 'dist',
+    assetsInlineLimit: 0, // Don't inline any assets
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
