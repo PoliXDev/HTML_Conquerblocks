@@ -1,0 +1,177 @@
+
+/* registration section */
+.registro {
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.92);
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+
+  /* registration title */
+  &__titulo {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #333;
+    font-size: 2rem;
+    font-weight: 600;
+    position: relative;
+    
+    &::after {
+      content: "";
+      position: absolute;
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(90deg, #0066cc, #00ccff);
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 2px;
+    }
+  }
+
+  &__form {
+    width: 100%;
+    
+    fieldset {
+      border: 1px solid rgba(221, 221, 221, 0.5);
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      border-radius: 8px;
+      background-color: rgba(255, 255, 255, 0.5);
+      
+      legend {
+        padding: 0 10px;
+        font-weight: 600;
+        color: #333;
+        background-color: rgba(255, 255, 255, 0.9);
+        border-radius: 4px;
+      }
+    }
+  }
+
+  &__login {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  &__link {
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: 500;
+    
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.form {
+  &__grupo {
+    margin-bottom: 1.5rem;
+  }
+
+  &__label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #333;
+    
+    &--checkbox {
+      display: flex;
+      align-items: center;
+      font-weight: normal;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    padding: 0.9rem 1rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s;
+    background-color: rgba(249, 249, 249, 0.8);
+    
+    &:focus {
+      outline: none;
+      border-color: #0066cc;
+      background-color: #fff;
+      box-shadow: 0 0 0 2px rgba(0, 102, 204, 0.15);
+    }
+  }
+
+  &__checkbox {
+    margin-right: 10px;
+    transform: scale(1.2);
+  }
+
+  &__link {
+    color: #0066cc;
+    text-decoration: none;
+    
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__submit {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    background: linear-gradient(90deg, #0066cc, #0055aa);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    
+    &:hover {
+      background: linear-gradient(90deg, #0077dd, #0066cc);
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(0, 102, 204, 0.3);
+    }
+    
+    &:active {
+      transform: translateY(0);
+      box-shadow: 0 2px 5px rgba(0, 102, 204, 0.3);
+    }
+  }
+}
+
+/* responsive styles */
+@media (max-width: 768px) {
+  .registro {
+    margin: 2rem 1rem;
+    padding: 1.5rem;
+    
+    &__titulo {
+      font-size: 1.8rem;
+    }
+  }
+  
+  .form {
+    &__submit {
+      padding: 10px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .registro {
+    margin: 1rem;
+    padding: 1rem;
+    
+    &__titulo {
+      font-size: 1.5rem;
+    }
+    
+    &__form fieldset {
+      padding: 1rem;
+    }
+  }
+} 

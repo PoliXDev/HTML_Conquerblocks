@@ -1,0 +1,162 @@
+@use '../abstracts/variables' as var;
+@use '../abstracts/mixins' as mix;
+
+// Variables locales
+$card-bg: #fff;
+$card-border-radius: 8px;
+$primary-color: #eeeeee;
+$secondary-bg: #f9f9f9;
+$text-dark: #222;
+$text-medium: #444;
+
+// Mixin para enlaces
+@mixin link-button($bg: $primary-color, $color: #fff, $border: none) {
+  display: inline-block;
+  padding: 0.5rem 2rem;
+  background-color: $bg;
+  color: $color;
+  border: $border;
+  border-radius: $card-border-radius / 2;
+  text-decoration: none;
+  font-weight: 600;
+  text-align: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-size: 0.9rem;
+  position: relative;
+  top: 1px;
+}
+
+.profesores-section {
+  padding: 2rem 0;
+  margin: 0 auto;
+  background-color: $secondary-bg;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+  
+  &.visible {
+    opacity: 1;
+  }
+  
+  h1 {
+    margin-bottom: 1rem;
+    color: $text-dark;
+  }
+  
+  p {
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    color: $text-medium;
+  }
+  
+  .profesores-grid {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 0 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .profesor-card {
+    flex: 1;
+    max-width: 425px;
+    text-align: center;
+    padding: 1rem;
+    
+    .profesor-image {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto 1rem;
+      display: block;
+    }
+    
+    h3 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: $text-dark;
+      margin-bottom: 0.5rem;
+    }
+    
+    h4 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: $text-medium;
+      margin-bottom: 1rem;
+    }
+    
+    p {
+      color: $text-medium;
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+  }
+}
+
+.courses-section {
+  padding: 2rem 0 3rem;
+  margin: -2% auto;
+  background-color: $secondary-bg;
+  
+  .courses-grid {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 0 1rem;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .course-card {
+    background-color: $card-bg;
+    border-radius: $card-border-radius;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(240, 16, 16, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex: 1;
+    max-width: 425px;
+    display: flex;
+    flex-direction: column;
+    
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(137, 235, 128, 0.12);
+    }
+    
+    .course-image {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      padding: 10px;
+    }
+    
+    h3 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      padding: 1.2rem 1.2rem 0.6rem;
+      color: $text-dark;
+      min-height: 40px;
+    }
+    
+    p {
+      padding: 0 1.2rem 1.2rem;
+      color: $text-medium;
+      font-size: 0.9rem;
+      line-height: 1.5;
+      flex-grow: 1;
+      overflow: hidden;
+    }
+    
+    .view-all-link {
+      @include link-button;
+      display: block;
+      margin: 0 1.2rem 1.2rem;
+      
+      &:hover {
+        background-color: darken($primary-color, 15%);
+      }
+    }
+  }
+} 

@@ -1,0 +1,9 @@
+@use '../abstracts/variables';
+
+html * {
+    font-family: variables.$poppins-font;
+}
+ 
+body {
+    overflow-x: hidden;
+} 
