@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <title>Iniciar Sesión | Academia Conquerblocks</title>
+        <link rel="stylesheet" href="./src/styles/style.scss">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <meta name="description" content="Inicia sesión en Academia Conquerblocks para acceder a tu área de estudiante">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    </head>
+
+    <body>
+        <main class="main-content">
+            <section class="login-section">
+                <div class="video-background">
+                    <video autoplay muted loop>
+                        <source src="public/video/login-video.mp4" type="video/mp4">
+                    </video>
+                    <div class="overlay"></div>
+                </div>
+                
+                <div class="login-card">
+                    <div class="logo-container">
+                        <img 
+                            src="public/img/common/logo-conquerblocks-color.png" 
+                            alt="Logo Academia Conquer"
+                            class="login-logo"
+                        >
+                    </div>
+                    
+                    <form class="login-form">
+                        <div class="form-group">
+                            <div class="input-with-icon">
+                                <div class="icon-container">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <input 
+                                    type="text" 
+                                    id="username" 
+                                    name="username" 
+                                    placeholder="Dirección de correo electrónico"
+                                    required
+                                >
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <div class="input-with-icon">
+                                <div class="icon-container">
+                                    <i class="fas fa-lock"></i>
+                                </div>
+                                <input 
+                                    type="password" 
+                                    id="password" 
+                                    name="password" 
+                                    placeholder="Contraseña"
+                                    required
+                                >
+                            </div>
+                        </div>
+                            
+                        <button type="submit" class="login-button">Iniciar Sesión</button>
+                        
+                        <div class="forgot-password">
+                            <p>¿Olvidaste tu contraseña? <a href="recuperar-password.html">Haz click aquí</a></p>
+                        </div>
+                    </form>
+                    
+                    <div class="register-button-container">
+                        <a href="registro.html" class="register-button">Registrarse</a>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- access denied message  -->
+            <div class="access-denied" id="accessDeniedMessage">
+                <i class="fas fa-exclamation-triangle message-icon"></i>
+                <h2 class="message-title">Acceso Denegado</h2>
+                <p class="message-text">Este es un proyecto de estudios de ConquerBlocks. No existe una base de datos de usuarios real. Esta página es solo una demostración de diseño y funcionalidad frontend.</p>
+                <button class="close-button" id="closeMessage">Entendido</button>
+            </div>
+        </main>
+
+        <footer class="main-footer">
+            <nav class="footer-content">
+                <div class="footer-logo">
+                    <img src="public/img/common/conqueblocks-logo-black.jpg" alt="Logo Academia Conquerblocks">
+                </div>
+                <div class="footer-links">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="quienes-somos.html">Quiénes somos</a></li>
+                        <li><a href="cursos.html">Cursos</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="registro.html">Registro</a></li>
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="social-links">
+                    <a href="#" class="facebook" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="twitter" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="linkedin" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="youtube" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+                <p class="copyright">&copy; 2025 Academia Conquer. Proyecto de HTML y CSS</p>
+                <a href="aviso-legal.html" class="legal-link">Aviso Legal</a>
+            </nav>
+        </footer>
+        <script type="module" src="src/main.js"></script>
+    </body>
+</html>

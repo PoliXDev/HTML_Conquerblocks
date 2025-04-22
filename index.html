@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Academia Conquerblocks - Formación en Desarrollo Web</title>
+    <link rel="stylesheet" href="./src/styles/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <meta name="description" content="Academia Conquer - Aprende desarrollo web con los mejores profesionales">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+    <header class="main-header">
+        <nav class="main-nav">
+            <div class="logo-container">
+                <figure>
+                    <a href="index.html">
+                        <img 
+                            src="public/img/common/logo-conquerblocks-color.png" 
+                            alt="Logo Academia Conquer"
+                            class="logo"
+                        >
+                    </a>
+                </figure>
+            </div>
+            
+            <!-- Hamburger menu button for mobile view-->
+            <button class="hamburger-btn" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <ul class="nav-menu" role="navigation">
+                <li class="nav-item dropdown nav-center">
+                    <a href="cursos.html" class="nav-link">Formaciones <span class="dropdown-arrow">▼</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="curso_fullstack.html" class="dropdown-item">Master en Desarrollo Web Full-Stack</a></li>
+                        <li><a href="curso_blockchain.html" class="dropdown-item">Master en Desarrollo Blockchain</a></li>
+                        <li><a href="curso_inteligencia_artificial.html" class="dropdown-item">Master en Inteligencia Artificial</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item nav-center"><a href="quienes-somos.html" class="nav-link">Sobre nosotros</a></li>
+                <li class="nav-item nav-right"><a href="registro.html" class="nav-link">Registro</a></li>
+                <li class="nav-item nav-right"><a href="login.html" class="nav-link nav-button">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="video-section">
+        <div class="container">
+            <div class="video-wrapper">
+                <video autoplay poster="public/img/common/video-poster.jpg" class="featured-video" id="mainVideo">
+                    <source src="public/video/developers_intro.mp4" type="video/mp4">
+                    Tu navegador no soporta la reproducción de videos.
+                </video>
+                <button class="sound-control" id="soundToggle">
+                    <span class="sound-icon">🔊</span>
+                </button>
+                <div class="video-caption">
+                    <h3>CONQUER BLOCKS</h3>
+                    <h1>TRANSFORMA TU <span class="highlight">FUTURO PROFESIONAL</span> CON LA ESCUELA QUE ESTÁ REVOLUCIONANDO LA FORMACIÓN TECNOLÓGICA</h1>
+                <a href="#formaciones" class="scroll-down" id="scrollDownButton">
+                    <div class="arrow"></div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <main class="main-content">
+        <section id="formaciones" class="hero-section">
+            <div class="hero-content">
+                <h1>Nuestras Formaciones</h1>
+                <p>En nuestra academia en línea, ofrecemos programas de formación diseñados para impulsar tu carrera en las áreas tecnológicas más demandadas...</p>
+            </div>
+        </section>
+
+        <section class="courses-section" id="courses-section">
+            
+            <div class="courses-grid">
+                <article class="course-card">
+                    <img 
+                        src="public/img/courses/full-stack-home.jpeg" 
+                        alt="Master en Desarrollo web full stack"
+                        class="course-image"
+                    >
+                    <h3>Master en Desarrollo web full stack</h3>
+                    <p>Domina el desarrollo de aplicaciones web de principio a fin utilizando las tecnologías más demandadas por el mercado. Conviértete en un profesional completo, preparado para afrontar cualquier reto digital.</p>
+                    <a href="curso_fullstack.html" class="view-all-link">Ver más</a>
+                </article>
+
+                <article class="course-card">
+                    <img 
+                        src="public/img/courses/blockchain-home.jpg" 
+                        alt="Master en Desarrollo Blockchain"
+                        class="course-image"
+                    >
+                    <h3>Master en Desarrollo Blockchain</h3>
+                    <p>Aprende a construir aplicaciones descentralizadas y domina la tecnología blockchain con las herramientas y lenguajes más utilizados en el sector. Prepárate para liderar la revolución digital del futuro.</p>
+                    <a href="curso_blockchain.html" class="view-all-link">Ver más</a>
+                </article>
+
+                <article class="course-card">
+                    <img 
+                        src="public/img/courses/artificial-home.png" 
+                        alt="Master en Inteligencia Artificial"
+                        class="course-image"
+                    >
+                    <h3>Master en Inteligencia Artificial</h3>
+                    <p>Explora el potencial de la inteligencia artificial y aprende a desarrollar soluciones inteligentes con algoritmos de machine learning, deep learning y procesamiento de datos. Da el siguiente paso hacia el futuro de la tecnología.</p>
+                    <a href="curso_inteligencia_artificial.html" class="view-all-link">Ver más</a>
+                </article>
+              
+            </div>
+        </section>
+
+        <section class="profesores-section">
+            <h1>Nuestros Profesores</h1>
+            <p>Aprende de expertos reconocidos en el mundo del desarrollo, con años de experiencia real en el sector y una pasión por compartir su conocimiento.</p>
+            <div class="profesores-grid">
+                <article class="profesor-card">
+                    <img 
+                        src="public/img/courses/yolanda.png" 
+                        alt="Yolanda Lopez"
+                        class="profesor-image"
+                    >
+                    <h3>Yolanda Lopez</h3>
+                    <h4>Ingeniera en telecomunicaciones</h4>
+                    <p>Enseña SQL y todo el área dedicada al procesamiento de datos dentro de nuestro Máster, así como el lenguaje de programación Solidity.</p>
+                </article>
+
+                <article class="profesor-card">
+                    <img 
+                        src="public/img/courses/bienvenido.jpg" 
+                        alt="Bienvenido Saez"
+                        class="profesor-image"
+                    >
+                    <h3>Bienvenido Saez</h3>
+                    <h4>Programador Especializado</h4>
+                    <p>Bienvenido cuenta con más de 15 años de experiencia en el mundo de la educación, especialmente enseñando HTML, CSS, Javascript y Django.</p>
+                </article>
+
+                <article class="profesor-card">
+                    <img 
+                        src="public/img/courses/carlos.avif" 
+                        alt="Alejandro medrano"
+                        class="profesor-image"
+                    >
+                    <h3>Alejandro Medrano</h3>
+                    <h4>Programador Especializado</h4>
+                    <p>Ingeniero en Machine Learning en Visium tras ocupar el puesto como Data-driven solutions para la resolución de problemas relacionados con el lenguaje natural en Indra.</p>
+                </article>
+            </div>
+        </section>
+
+        <main class="hero-numbers">
+           
+            <div class="number-card">
+                <h2>+6000</h2>
+                <p>Alumnos formados</p>
+            </div>
+            <div class="number-card">
+                <h2>+15</h2>
+                <p>Paises</p>
+            </div>
+            <div class="number-card">
+                <h2>+100k</h2>
+                <p>Redes sociales</p>
+            </div>
+        </main>
+          <section class="news-section">
+            <h2>Nuestro Blog</h2>
+            
+            <div class="news-grid">
+                <article class="news-card">
+                    <img src="public/img/blog/fullstack-noticia.jpg" alt="Desarrollo Web" class="news-image">
+                    <div class="news-content">
+                        <span class="news-date">10 de abril, 2025</span>
+                        <h3>Funciones de un Desarrollador Full-Stack</h3>
+                        <p>Las funciones de un desarrollador full-stack son variadas y varían mucho según la empresa o el proyecto en el que estén trabajando, pero es posible definir una serie de responsabilidades comunes.</p>
+                        <a href="blog.html" class="read-more">Leer más</a>
+                    </div>
+                </article>
+                
+                <article class="news-card">
+                    <img src="public/img/blog/blockchain-noticia.jpg" alt="Blockchain" class="news-image">
+                    <div class="news-content">
+                        <span class="news-date">3 de mayo, 2023</span>
+                        <h3>¿Para qué sirve la tecnología blockchain?</h3>
+                        <p>El potencial de la tecnología blockchain va más allá de Bitcoin. Exploramos sus aplicaciones en diversos sectores y por qué los desarrolladores deberían conocerla.</p>
+                        <a href="blog.html" class="read-more">Leer más</a>
+                    </div>
+                </article>
+                
+                <article class="news-card">
+                    <img src="public/img/blog/inteligencia-noticia.jpg" alt="Inteligencia Artificial" class="news-image">
+                    <div class="news-content">
+                        <span class="news-date">21 de junio, 2023</span>
+                        <h3>Cómo la IA Está Cambiando el Desarrollo de Software</h3>
+                        <p>La inteligencia artificial está revolucionando la forma en que creamos software. Analizamos herramientas y metodologías que todo desarrollador debería conocer.</p>
+                        <a href="blog.html" class="read-more">Leer más</a>
+                    </div>
+                </article>
+                <a href="blog.html" class="view-all-link-botton">Ver todas las noticias</a>
+            </div>
+        </section>
+
+    </main>
+    <section class="about-section">
+        <h2>Quiénes Somos</h2>
+        <p>Conquer Blocks es la mayor academia de programación en habla hispana, y la que cuenta con mayores garantías de empleo.</p>
+        <a href="quienes-somos.html" class="view-all-link">Conoce más sobre nosotros</a>
+    </section>
+
+    <footer class="main-footer">
+        <nav class="footer-content">
+            <div class="footer-logo">
+                <img src="public/img/common/conqueblocks-logo-black.jpg" alt="Logo Academia Conquerblocks">
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="quienes-somos.html">Quiénes somos</a></li>
+                    <li><a href="cursos.html">Cursos</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="registro.html">Registro</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="social-links">
+                <a href="#" class="facebook" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="twitter" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="linkedin" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="youtube" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
+            <p class="copyright">&copy; 2025 Academia Conquer. Proyecto de HTML y CSS</p>
+            <a href="aviso-legal.html" class="legal-link">Aviso Legal</a>
+        </nav>
+    </footer>
+    <script type="module" src="src/main.js"></script>
+</body>
+</html>

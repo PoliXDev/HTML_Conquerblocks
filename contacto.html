@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <title>Contacto | ConquerBlocks</title>
+        <link rel="stylesheet" href="./src/styles/main.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <meta name="description" content="Contacta con ConquerBlocks">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    </head>
+
+    <body>
+        <header class="main-header">
+            <nav class="main-nav">
+                <div class="logo-container">
+                    <figure>
+                        <a href="index.html">
+                            <img 
+                                src="public/img/common/logo-conquerblocks-color.png" 
+                                alt="Logo Academia Conquer"
+                                class="logo"
+                            >
+                        </a>
+                    </figure>
+                </div>
+                
+                <!-- Hamburger menu button for mobile view-->
+                <button class="hamburger-btn" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                
+                <ul class="nav-menu" role="navigation">
+                    <li class="nav-item dropdown nav-center">
+                        <a href="cursos.html" class="nav-link">Formaciones <span class="dropdown-arrow">▼</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="curso_fullstack.html" class="dropdown-item">Master en Desarrollo Web Full-Stack</a></li>
+                            <li><a href="curso_blockchain.html" class="dropdown-item">Master en Desarrollo Blockchain</a></li>
+                            <li><a href="curso_inteligencia_artificial.html" class="dropdown-item">Master en Inteligencia Artificial</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item nav-center"><a href="quienes-somos.html" class="nav-link">Sobre nosotros</a></li>
+                    <li class="nav-item nav-right"><a href="registro.html" class="nav-link">Registro</a></li>
+                    <li class="nav-item nav-right"><a href="login.html" class="nav-link nav-button">Login</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="main-content">
+            <section class="contact-section">
+                <h1 class="section-title">Contàctanos</h1>
+
+                <article class="contact-info">
+                    <h3>Información de Contacto</h3>
+                    <ul>
+                        <li>
+                            <h3>Dirección</h3>
+                            <p>C.de ibiza, 4, retiro, 2009 Madrid</p>
+                        </li>
+                        <li>
+                            <h3>Teléfono</h3>
+                            <p>+34 123 456 789</p>
+                        </li>
+                        <li>
+                            <h3>Email</h3>
+                            <p>info@conquerblocks.com</p>
+                        </li>
+                        <li>
+                            <h3>Horario de Atención</h3>
+                            <p>Lunes a Viernes: 9:00 - 18:00</p>
+                            <p>Sábados: 9:00 - 13:00</p>
+                        </li>
+                    </ul>
+                </article>
+                <section class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3037.6175884093127!2d-3.675954023682725!3d40.41799005620347!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd42262e1b8391a1%3A0xf5ba5c3e9e05bc29!2sC.%20de%20Ibiza%2C%204%2C%2028009%20Madrid!5e0!3m2!1ses!2ses!4v1735131724178!5m2!1ses!2ses" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </section>
+
+                
+                <article class="contact-form">
+                    <h2 class="form-title">Envíanos un Mensaje</h2>
+                    <form action="/contacto" method="POST" class="form" id="contactForm">
+                        <div class="form-group">
+                            <label for="nombre" class="form-label">Nombre completo</label>
+                            <input 
+                                type="text" 
+                                id="nombre" 
+                                name="nombre" 
+                                class="form-input"
+                                required
+                            >
+                        </div>
+<br>
+ 
+                        <div class="form-group">
+                            <label for="email" class="form-label">Correo electrónico</label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email" 
+                                class="form-input"
+                                required
+                            >
+                        </div>
+<br>
+                        <div class="form-group">
+                            <label for="telefono" class="form-label">Teléfono</label>
+                            <input 
+                                type="tel" 
+                                id="telefono" 
+                                name="telefono"
+                                class="form-input"
+                            >
+                        </div>
+<br>
+                        <div class="form-group">
+                            <label for="asunto" class="form-label">Asunto</label>
+                            <input 
+                                type="text" 
+                                id="asunto" 
+                                name="asunto" 
+                                class="form-input"
+                                required
+                            >
+                        </div>
+<br>
+                         <div class="form-group">
+                            <label for="mensaje" class="form-label">Mensaje</label>
+                            <textarea 
+                                id="mensaje" 
+                                name="mensaje" 
+                                rows="5" 
+                                class="form-input"
+                                required
+                            ></textarea>
+                        </div>
+<br>
+                   <div class="form-group">
+                            <button type="submit" class="form-button">Enviar Mensaje</button>
+                        </div>
+                    </form>
+                </article>
+            </section>
+            
+            <!-- confirmation message -->
+            <div class="access-denied" id="contactConfirmation">
+                <i class="fas fa-check-circle message-icon"></i>
+                <h2 class="message-title">Mensaje Enviado</h2>
+                <p class="message-text">Gracias por contactarnos. Este es un proyecto de estudios de ConquerBlocks. No se enviará ningún mensaje real. Esta página es solo una demostración de diseño y funcionalidad frontend.</p>
+                <button class="close-button" id="closeMessage">Entendido</button>
+            </div>
+        </main>
+
+        <footer class="main-footer">
+            <nav class="footer-content">
+                <div class="footer-logo">
+                    <img src="public/img/common/conqueblocks-logo-black.jpg" alt="Logo Academia Conquerblocks">
+                </div>
+                <div class="footer-links">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="quienes-somos.html">Quiénes somos</a></li>
+                        <li><a href="cursos.html">Cursos</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="registro.html">Registro</a></li>
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="social-links">
+                    <a href="#" class="facebook" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="twitter" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="linkedin" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="youtube" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+                <p class="copyright">&copy; 2025 Academia Conquer. Proyecto de HTML y CSS</p>
+                <a href="aviso-legal.html" class="legal-link">Aviso Legal</a>
+            </nav>
+        </footer>
+        <script type="module" src="src/main.js"></script>
+    </body>
+</html>

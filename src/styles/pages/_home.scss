@@ -1,0 +1,414 @@
+@use '../abstracts/variables' as var;
+@use '../abstracts/mixins' as mix;
+
+/* hero section */
+.hero-section {
+  background-color: rgba(245, 245, 245, 0.8);
+  padding: 2rem 1rem;
+  text-align: center;
+  border-radius: 15px;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  margin-bottom: 2rem;
+  
+  .hero-content {
+    max-width: 100%;
+    margin: 0 auto;
+    /* hero title */
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: var.$black-color;
+      position: relative;
+      display: inline-block;
+      
+      &::after {
+        content: "";
+        position: absolute;
+        width: 60px;
+        height: 3px;
+        background: linear-gradient(90deg, #0066cc, #00ccff);
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 2px;
+      }
+    }
+    
+    p {
+      font-size: 1rem;
+      line-height: 1.5;
+      margin-bottom: 1.5rem;
+    }
+  }
+  /* hero content */
+  @include mix.breakpoint(tablet) {
+    padding: 3rem 2rem;
+    
+    .hero-content {
+      max-width: 800px;
+      
+      h1 {
+        font-size: 2.5rem;
+      }
+      
+      p {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+/* about section */
+.about-section {
+  padding: 2rem 1rem;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  margin: 2rem auto;
+  max-width: 1200px;
+  
+  h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    color: #348080;
+    position: relative;
+    display: inline-block;
+    
+    &::after {
+      content: "";
+      position: absolute;
+      width: 50px;
+      height: 3px;
+      background: linear-gradient(90deg, #0066cc, #00ccff);
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 2px;
+    }
+  }
+  
+  p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* view all link */
+  .view-all-link {
+    display: inline-block;
+    color: #348080;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border: 2px solid #348080;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      background-color: #348080;
+      color: white;
+    }
+  }
+  
+  @include mix.breakpoint(tablet) {
+    padding: 3rem 2rem;
+    
+    h2 {
+      font-size: 2rem;
+    }
+    
+    p {
+      font-size: 1.1rem;
+      max-width: 800px;
+    }
+  }
+}
+
+/* courses section */
+.courses-section {
+  padding: 2rem 1rem;
+  background-color: rgba(249, 249, 249, 0.8);
+  border-radius: 15px;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  margin-bottom: 2rem;
+  
+  header {
+    text-align: center;
+    margin-bottom: 2rem;
+    
+    h2 {
+      font-size: 1.75rem;
+      color: #348080;
+      margin-bottom: 0.5rem;
+    }
+  }
+  
+  .courses-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    
+    .course-card {
+      background-color: rgba(255, 255, 255, 0.92);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+      
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      }
+      
+      .course-image {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+      
+      h3 {
+        font-size: 1.3rem;
+        padding: 1rem 1rem 0.5rem;
+        color: #348080;
+      }
+      
+      p {
+        padding: 0 1rem 1rem;
+        font-size: 0.95rem;
+        line-height: 1.5;
+        color: #555;
+      }
+      
+      .view-all-link {
+        display: inline-block;
+        margin: 0 1rem 1rem;
+        color: #348080;
+        text-decoration: none;
+        font-weight: 600;
+        
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  
+  nav {
+    text-align: center;
+    
+    .view-all-link {
+      display: inline-block;
+      color: #348080;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 0.5rem 1rem;
+      border: 2px solid #348080;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+      
+      &:hover {
+        background-color: #348080;
+        color: white;
+      }
+    }
+  }
+  
+  @include mix.breakpoint(tablet) {
+    padding: 3rem 2rem;
+    
+    header {
+      h2 {
+        font-size: 2rem;
+      }
+    }
+    
+    .courses-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @include mix.breakpoint(desktop) {
+    .courses-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+
+/* profesores section */
+.profesores-section {
+  padding: 3rem 1rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 15px;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+    position: relative;
+    display: inline-block;
+    
+    &::after {
+      content: "";
+      position: absolute;
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(90deg, #0066cc, #00ccff);
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 2px;
+    }
+  }
+  
+  p {
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    color: #555;
+  }
+  
+  .profesores-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    
+    @include mix.breakpoint(tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    @include mix.breakpoint(desktop) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+
+/* numbers section */
+.hero-numbers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 3rem 1rem;
+  margin-bottom: 2rem;
+  background-color: rgba(0, 102, 204, 0.85);
+  border-radius: 15px;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  
+  .number-card {
+    text-align: center;
+    margin: 1rem;
+    padding: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    min-width: 200px;
+    backdrop-filter: blur(10px);
+    
+    h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: white;
+    }
+    
+    p {
+      font-size: 1.1rem;
+      color: rgba(255, 255, 255, 0.9);
+      font-weight: 500;
+    }
+  }
+}
+
+/* news section */
+.news-section {
+  padding: 2rem 1rem;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 15px;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  margin-bottom: 2rem;
+  
+  h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+    color: #348080;
+    position: relative;
+    display: inline-block;
+    
+    &::after {
+      content: "";
+      position: absolute;
+      width: 50px;
+      height: 3px;
+      background: linear-gradient(90deg, #0066cc, #00ccff);
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 2px;
+    }
+  }
+  
+  .news-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    
+    @include mix.breakpoint(tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    @include mix.breakpoint(desktop) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .news-card {
+      background-color: rgba(255, 255, 255, 0.92);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+      text-align: left;
+      
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      }
+    }
+  }
+  /* view all link */
+  .view-all-link-botton {
+    display: inline-block;
+    margin-top: 2rem;
+    color: #348080;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.8rem 1.5rem;
+    border: 2px solid #348080;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      background-color: #348080;
+      color: white;
+    }
+  }
+  
+  @include mix.breakpoint(tablet) {
+    padding: 3rem 2rem;
+    
+    h2 {
+      font-size: 2rem;
+    }
+  }
+}
