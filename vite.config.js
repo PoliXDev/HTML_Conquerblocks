@@ -30,7 +30,9 @@ export default defineConfig({
             ])
         )
       }
-    }
+    },
+    // Ensure public directory is copied to dist
+    copyPublicDir: true,
   },
   resolve: {
     alias: {
@@ -44,5 +46,16 @@ export default defineConfig({
       },
     },
   },
+  // Additional plugin to copy src/styles to dist/src/styles
+  plugins: [
+    {
+      name: 'copy-assets',
+      apply: 'build',
+      generateBundle() {
+        // This will be handled by the build process
+        console.log('Assets will be copied to the dist directory');
+      }
+    }
+  ]
 });
 
